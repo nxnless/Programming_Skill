@@ -22,7 +22,6 @@ int main(){
 	}
 	char tmp;
 	for(int i = 1 ; i< bi.length() ; i+=2){
-	
 		tmp = bi[i-1];
 		bi[i-1] = bi[i];
 		bi[i] = tmp;

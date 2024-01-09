@@ -1,29 +1,29 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 int main() {
     int N, M;
-    cin >> N >> M;
-    vector<int> heights;
-    vector<int> pressures(M);
+    cin>>N>>M;
+    int Height[N];
+    int Press[M];
     for (int i = 0; i < N; ++i) {
-        cin >> heights[i];
+        cin >> Height[i];
     }
     for (int j = 0; j < M; ++j) {
-        cin >> pressures[j];
+        cin >> Press[j];
     }
     for (int j = 0; j < M; ++j) {
-        int broken_count = 0;
+        int Count = 0;
+
         for (int i = 0; i < N; ++i) {
-            if (heights[i] > pressures[j]) {
-                ++broken_count;
+            if (Height[i] > Press[j]) {
+                ++Count;
             }
         }
-        cout << broken_count << endl;
-    }
 
+        cout << Count << endl;
+    }
     return 0;
 }
 
